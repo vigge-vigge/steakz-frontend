@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Light mode (default) */
+body,
+body.light-mode {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #0f0f0f !important;
+  color: #f3f4f6 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #7a1c1c;
+  margin-bottom: 0.5em;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #fbbf24;
+}
+
+a {
+  color: #7a1c1c;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #b32d2d;
+}
+
+body.dark-mode a {
+  color: #fbbf24;
+}
+body.dark-mode a:hover {
+  color: #fde68a;
+}
+
+button, .btn {
+  background: #7a1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: #b32d2d;
+}
+
+body.dark-mode button, 
+body.dark-mode .btn {
+  background: #27272a;
+  color: #fbbf24;
+}
+body.dark-mode button:hover, 
+body.dark-mode .btn:hover {
+  background: #fbbf24;
+  color: #23232a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-overlay {
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2em;
+  margin-bottom: 2em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .card,
+body.dark-mode .admin-card,
+body.dark-mode .dashboard-card {
+  background: #1a1a1a !important;
+  color: #f3f4f6 !important;
+  border-color: #333333 !important;
+}
+
+/* Comprehensive Dark Mode Styles */
+body.dark-mode {
+  background: #0f0f0f !important;
+  color: #f3f4f6 !important;
+}
+
+/* Container and sections */
+body.dark-mode .container,
+body.dark-mode section,
+body.dark-mode div[style*="background"] {
+  background-color: #0f0f0f !important;
+  color: #f3f4f6 !important;
+}
+
+/* Forms and inputs */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #2a2a2a !important;
+  color: #f3f4f6 !important;
+  border-color: #444444 !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: #fbbf24 !important;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2) !important;
+}
+
+/* Tables */
+body.dark-mode table,
+body.dark-mode .data-table {
+  background: #1a1a1a !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode th {
+  background: #2a2a2a !important;
+  color: #f3f4f6 !important;
+  border-color: #444444 !important;
+}
+
+body.dark-mode td {
+  border-color: #333333 !important;
+  color: #f3f4f6 !important;
+}
+
+/* Navigation */
+body.dark-mode .navbar,
+body.dark-mode nav {
+  background: #0a0a0a !important;
+  border-color: #333333 !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #1a1a1a !important;
+  color: #f3f4f6 !important;
+}
+
+/* Text elements */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode div {
+  color: #f3f4f6 !important;
+}
+
+/* Override any inline styles that set light backgrounds */
+body.dark-mode [style*="background-color: #fff"],
+body.dark-mode [style*="background-color: white"],
+body.dark-mode [style*="background: #fff"],
+body.dark-mode [style*="background: white"] {
+  background-color: #1a1a1a !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode [style*="color: #222"],
+body.dark-mode [style*="color: #000"],
+body.dark-mode [style*="color: black"] {
+  color: #f3f4f6 !important;
+}
+
+/* Specific overrides for styled components */
+body.dark-mode [style*="backgroundColor: '#fff'"],
+body.dark-mode [style*="backgroundColor: 'white'"] {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode [style*="color: '#222'"],
+body.dark-mode [style*="color: '#000'"] {
+  color: #f3f4f6 !important;
+}
+
+/* Fix oversized SVG and image icons globally and ensure they respect Tailwind sizing */
+svg, img {
+  max-width: 2em;
+  max-height: 2em;
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Optional: For icons specifically, you can use a class like .icon if needed */
+.icon, .feedback-icon {
+  width: 1.25em;
+  height: 1.25em;
+  max-width: 1.5em;
+  max-height: 1.5em;
+  vertical-align: middle;
+}
+
+/* Dashboard-style card layout for Customer Feedback page */
+
+body, html {
+  background: #f7f8fa;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 34, 68, 0.08);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222244;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #f7f8fa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(34, 34, 68, 0.04);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222244;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6c63ff;
+}
+
+.card-sub {
+  font-size: 0.9rem;
+  color: #7d8597;
+}
+
+.reviews-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.recent-reviews, .customer-reviews {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(34, 34, 68, 0.04);
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.recent-reviews-list {
+  margin-top: 1rem;
+}
+
+.recent-review-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f1f5;
+}
+
+.recent-review-row:last-child {
+  border-bottom: none;
+}
+
+.review-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-rating {
+  color: #ffb400;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.customer-reviews-list {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.customer-review-card {
+  background: #f7f8fa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(34, 34, 68, 0.04);
+  padding: 1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.customer-review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-review-avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-review-name {
+  font-weight: 600;
+  color: #222244;
+}
+
+.customer-review-date {
+  font-size: 0.85rem;
+  color: #7d8597;
+}
+
+.customer-review-content {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.customer-review-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Branch Reports Dark Theme Styles */
+.branch-reports-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-morphism:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.floating-card {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.floating-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Custom scrollbar for dark theme */
+.dark-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
